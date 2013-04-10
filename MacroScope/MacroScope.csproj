@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F9A61F8-9732-42B4-BDE0-DA7808BE9264}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MacroScope</RootNamespace>
+    <AssemblyName>MacroScope</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ANTLR\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime.Debug, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ANTLR\Antlr3.Runtime.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime.JavaExtensions, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ANTLR\Antlr3.Runtime.JavaExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr4.StringTemplate, Version=4.0.6.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ANTLR\Antlr4.StringTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr4.StringTemplate.Visualizer, Version=4.0.6.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ANTLR\Antlr4.StringTemplate.Visualizer.dll</HintPath>
+    </Reference>
+    <Reference Include="AntlrBuildTask, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\ANTLR\AntlrBuildTask.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliasedItem.cs" />
+    <Compile Include="AlterStatement.cs" />
+    <Compile Include="Analyzer.cs" />
+    <Compile Include="Assignment.cs" />
+    <Compile Include="BracketedExpression.cs" />
+    <Compile Include="CaseAlternative.cs" />
+    <Compile Include="CaseExpression.cs" />
+    <Compile Include="CaseInsensitiveStringStream.cs" />
+    <Compile Include="CreateStatement.cs" />
+    <Compile Include="DateTimeFunction.cs" />
+    <Compile Include="DateTimeUnit.cs" />
+    <Compile Include="DbObject.cs" />
+    <Compile Include="DefaultValue.cs" />
+    <Compile Include="DeleteStatement.cs" />
+    <Compile Include="Dot.cs" />
+    <Compile Include="DoubleValue.cs" />
+    <Compile Include="DropStatement.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="ExpressionItem.cs" />
+    <Compile Include="ExtractFunction.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="FunctionCall.cs" />
+    <Compile Include="GroupByClause.cs" />
+    <Compile Include="Identifier.cs" />
+    <Compile Include="IExpression.cs" />
+    <Compile Include="INode.cs" />
+    <Compile Include="InsertStatement.cs" />
+    <Compile Include="IntegerValue.cs" />
+    <Compile Include="Interval.cs" />
+    <Compile Include="IStatement.cs" />
+    <Compile Include="IVisitor.cs" />
+    <Compile Include="Join.cs" />
+    <Compile Include="LiteralDateTime.cs" />
+    <Compile Include="MAccessTailor.cs" />
+    <Compile Include="MSqlServerTailor.cs" />
+    <Compile Include="MTailor.cs" />
+    <Compile Include="MySqlTailor.cs" />
+    <Compile Include="Namer.cs" />
+    <Compile Include="NullValue.cs" />
+    <Compile Include="ExpressionOperator.cs" />
+    <Compile Include="OracleTailor.cs" />
+    <Compile Include="OrderExpression.cs" />
+    <Compile Include="ParamGrower.cs" />
+    <Compile Include="ParamPicker.cs" />
+    <Compile Include="PassiveVisitor.cs" />
+    <Compile Include="PatternExpression.cs" />
+    <Compile Include="Placeholder.cs" />
+    <Compile Include="PredicateExpression.cs" />
+    <Compile Include="PredicateQuantifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryExpression.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="SelectStatement.cs" />
+    <Compile Include="SqlServerCETailor.cs" />
+    <Compile Include="Stringifier.cs" />
+    <Compile Include="SwitchFunction.cs" />
+    <Compile Include="TableWildcard.cs" />
+    <Compile Include="TailorUtil.cs" />
+    <Compile Include="TracingVisitor.cs" />
+    <Compile Include="TypeCast.cs" />
+    <Compile Include="UpdateStatement.cs" />
+    <Compile Include="Variable.cs" />
+    <Compile Include="Wildcard.cs" />
+    <Compile Include="StringValue.cs" />
+    <Compile Include="Table.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Antlr3 Include="MacroScope.g3">
+      <Generator>MSBuild:Compile</Generator>
+    </Antlr3>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <AntlrBuildTaskPath>$(ProjectDir)..\Reference\Antlr</AntlrBuildTaskPath>
+    <AntlrToolPath>$(ProjectDir)..\Reference\Antlr\Antlr3.exe</AntlrToolPath>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)..\Reference\Antlr\Antlr3.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

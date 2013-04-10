@@ -1,0 +1,14 @@
+﻿tree grammar MacroscopeWalker;
+
+options {
+    language=CSharp3;
+    ASTLabelType=CommonTree;
+	tokenVocab=MacroScope;
+}
+
+@namespace{MacroScopeWalker}
+
+public
+compileUnit
+    :   EOF
+    ;
